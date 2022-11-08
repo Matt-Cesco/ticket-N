@@ -1,0 +1,18 @@
+.card{
+   border: none;
+   background-color: transparent;
+   .card-img{
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+   }
+   .card-body{
+      a{
+         @media (max-width:$md){
+            font-size: 0.9rem;
+         }
+      }
+   }
+   
+}

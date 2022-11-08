@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" media="screen" href="./Js-Css/style.css">
+   <script src="https://cdn-eu.seatsio.net/chart.js"></script>
+</head>
+<body style="overflow-x: hidden;">
+   <!-- Header -->
+   <header class="container-fluid navbar-sticky" id="header" class="pt-2 pb-2">
+      <!-- Navbar Desktop -->
+      <div class="container-fluid my-3 px-1 px-xl-5 d-none d-xxl-block">
+         <div class="row align-items-center">
+            <div class="col-lg-8">
+               <div class="d-flex">
+                  <div class="logo">
+                     <a href="./index.html">
+                        <img class="img-fluid" src="./images/tnLogo.png" alt="" srcset="">
+                     </a>
+                  </div>
+                  <div class="menu d-flex justify-content-start mx-3">
+                     <nav class="navbar p-0 text-center d-flex justify-content-between">
+                        <div class="collapse navbar-collapse d-flex justify-content-center">
+                           <div class="d-flex justify-content-between align-items-center">
+                              <div class="nav-item">
+                                 <a class="nav-link fs-sm fw-bolder text-uppercase px-3" href="./category-page.html">
+                                    concerts
+                                 </a>
+                              </div>
+                              <div class="nav-item">
+                                 <a class="nav-link fs-sm fw-bolder text-uppercase px-3" href="./category-page.html">
+                                    arts & theater
+                                 </a>
+                              </div>
+                              <div class="nav-item">
+                                 <a class="nav-link fs-sm fw-bolder text-uppercase px-3" href="./category-page.html">
+                                    festivals
+                                 </a>
+                              </div>
+                              <div class="nav-item">
+                                 <a class="nav-link fs-sm fw-bolder text-uppercase px-3" href="./category-page.html">
+                                    sports
+                                 </a>
+                              </div>
+                              <div class="nav-item">
+                                 <a class="nav-link fs-sm fw-bolder text-uppercase secondary-color px-3" href="">
+                                    river rooms
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-3 d-flex justify-content-end">
+               <div class="container py-4 px-0">
+                  <form id="frmSearch" action="/Search/" method="get" class="">
+                     <div class="input-group d-flex px-md-2">
+                        <div class="flex-fill">
+                           <input class="form-control shadow-none" type="text" name="Query" placeholder="Search for an Artist, Event or Venue">
+                        </div>
+                        <div class="input-group-append">
+                           <button class="btn btn-primary p-3" type="submit" aria-label="Search">
+                              <img src="./images/icons/search.svg" height="18" width="24" alt="" srcset="">
+                           </button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+            <div class="col-lg-1 currencies-login d-flex justify-content-end">        
+               <div class="cart-login align-items-center"> 
+                  <ul class="list-inline list-unstyled mb-0">
+                     <li class="list-inline-item mx-3">
+                        <a class="login" href="./account-page.html">
+                           <img src="./images/icons/user-profile-avatar-svgrepo-com.svg" height="22" alt="" srcset="">
+                        </a>
+                     </li>
+                     <li class="list-inline-item image-container-basket">
+                        <a class="basket" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                           <img src="./images/icons/bag.svg" height="24" alt="" srcset="">
+                        </a>
+                        <a href="#offcanvasExample" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasExample">
+                           <span class="product-thumbnail-quantity" aria-hidden="true" id="BasketCount2">0</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      <!-- Navbar Mobile -->
+      <div class="container my-3 b-block d-xxl-none">
+         <div class="row align-items-center">
+            <div class="col-4 d-flex justify-content-start px-3">
+               <div class="menu-search-mobile d-flex align-items-center"> 
+                  <div class="menu-mobile-button">
+                     <div class="hamburger-icon" id="icon">
+                        <div class="icon-1" id="a"></div>
+                        <div class="icon-2" id="b"></div>
+                        <div class="icon-3" id="c"></div>
+                        <div class="clear"></div>
+                      </div>
+                  </div>
+                  <div class="search-mobile-button ms-4 mb-1">
+                     <img src="./images/icons/search-black.svg" height="19" alt="" srcset="">
+                  </div>
+               </div>
+            </div>
+            <div class="col-4 d-flex justify-content-center">
+               <div class="center logo">
+                  <a href="./index.html">
+                     <img class="img-fluid" src="./images/tnLogo.png" alt="" srcset="">
+                  </a>        
+               </div>
+            </div>
+            <div class="col-4 d-flex justify-content-end px-4">
+               <div class="cart-login-mobile d-flex align-items-center"> 
+                  <a class="profile-mobile-button d-flex align-items-center" href="./account-page.html">
+                     <img src="./images/icons/person.svg" height="26" alt="" srcset="">
+                  </a>
+                  <div class="basket-mobile-button image-container-basket d-flex align-items-center ps-3">
+                     <a class="basket mb-1" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                        <img src="./images/icons/bag.svg" height="22" alt="" srcset="">
+                     </a>
+                     <a href="#offcanvasExample" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasExample">
+                        <span class="product-thumbnail-quantity" aria-hidden="true" id="BasketCount">0</span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="container py-4 search-bar-appear-mobile">
+               <form id="frmSearch" action="/Search/" method="get">
+                  <div class="input-group d-flex justify-content-center d-block d-xxl-none w-100 px-2">
+                     <input class="form-control shadow-none w-50" type="text" name="Query" placeholder="Search...">
+                     <div class="input-group-append">
+                        <button class="btn btn-secondary p-3" type="submit" aria-label="Search">
+                           <img src="./images/icons/search.svg" height="18" alt="" srcset="">
+                        </button>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+      <!-- OffCanvas Basket Menu -->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+         <div class="offcanvas-header">
+            <div class="basket-icon-title d-flex align-items-center">
+               <div class="basket-icon px-2 d-flex justify-content-center align-items-center">
+                  <img src="./images/icons/bag.svg" height="22" alt="" srcset="">
+               </div>
+               <div class="basket-title fs-xl fw-bold py-2">
+                  My Tickets
+               </div>
+            </div>
+           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+         </div>
+         <div class="offcanvas-body p-0">
+            <div class="container container-side-basket d-flex flex-column h-100">
+               <div class="container flex-grow-1 px-0">
+                  <hr class="m-0">
+                  <!-- Basket Item -->
+                  <div class="container basket-item px-3 py-4">
+                     <div class="row">
+                        <div class="col-12">
+                           <div class="side-basket-title-product-price w-100 d-flex justify-content-between">
+                              <div class="side-basket-product-title fs-xsm fw-bolder">
+                                 <p>Luther - Luther Vandross Experience</p>
+                                 <p class="m-0">Seat A11</p>
+                              </div>
+                              <div class="side-basket-ticket-price fs-sm fw-bolder">
+                                 £10
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <hr>
+                  <!-- Basket Item -->
+                  <div class="container basket-item px-3 py-4">
+                     <div class="row">
+                        <div class="col-12">
+                           <div class="side-basket-title-product-price w-100 d-flex justify-content-between">
+                              <div class="side-basket-product-title fs-xsm fw-bolder">
+                                 <p>Luther - Luther Vandross Experience</p>
+                                 <p class="m-0">Seat A11</p>
+                              </div>
+                              <div class="side-basket-ticket-price fs-sm fw-bolder">
+                                 £10
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="container">
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="d-flex justify-content-between">
+                           <div class="side-basket-total-title fs-sm fst-normal">
+                              Delivery
+                           </div>
+                           <div class="side-basket-total-price fs-sm fst-italic">
+                              Calculated at checkout
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row py-2">
+                     <div class="col-12">
+                        <div class="d-flex justify-content-between">
+                           <div class="side-basket-total-title fs-sm fw-bolder">
+                              Subtotal
+                           </div>
+                           <div class="side-basket-total-price fs-sm fw-bolder" id="BasketTotal">£0.00
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="container py-3">
+                     <div class="row">
+                        <a class="btn btn-secondary fs-sm" href="./basket.html">View Basket</a>
+                     </div>
+                  </div>
+                  <div class="container pb-4">
+                     <div class="row">
+                        <a class="btn btn-primary fs-sm" href="./checkout-info.html">Checkout</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+   <!-- Mobile Menu -->
+   <div class="container-fluid nav-content-mobile">
+      <ul class="container navlinks-menu d-column-flex align-items-center pt-5">
+         <li class="navlink-mobile fs-lg">
+            <a class="fw-bolder">
+               concerts
+            </a>
+         </li>
+         <hr class="my-2">
+         <li class="navlink-mobile fs-lg">
+            <a class="fw-bolder">
+               arts & theater
+            </a>
+         </li>
+         <hr class="my-2">
+         <li class="navlink-mobile fs-lg">
+            <a class="fw-bolder">
+               festivals
+            </a>
+         </li>
+         <hr class="my-2">
+         <li class="navlink-mobile fs-lg">
+            <a class="fw-bolder">
+               sports
+            </a>
+         </li>
+         <hr class="my-2">
+         <li class="navlink-mobile fs-lg">
+            <a class="fw-bolder">
+               river rooms
+            </a>
+         </li>
+      </ul>
+   </div>
+   <hr>
+<div class="container">
+   <div class="row py-4">
+      <div class="d-lg-flex align-items-end">
+         <p class="fs-lg fw-bolder m-0">Luther - Luther Vandross Experience</p>
+         <p class="fs-sm m-0 ps-lg-3">Nottingham Albert Hall</p>
+         <p class="fs-sm m-0 ps-lg-3">Wednesday 9th Nov 2023 at 20:00</p>
+      </div>
+   </div>
+</div>
+
+<!-- container iframe -->
+<div class="container px-0">
+   <div class="row">
+      <div class="col-lg-8 container-iframe order-2 order-lg-1">
+         <form class="text-center" id="TicketBuyerForm" method="post">
+            <div class="d-flex justify-content-center"></div>
+            <div id="chart"></div>
+         </form>
+      </div>
+      <div class="col-lg-3 offset-lg-1 order-1 order-lg-2 px-0">
+         <div class="container-fluid px-0 d-block d-lg-none mb-3">
+            <div class="accordion accordion-flush" id="accordionGetTickets">
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingTicket">
+                     <button class="accordion-button collapsed bg-primary fs-lg py-3 text-uppercase fw-bolder text-white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTickets" aria-expanded="false" aria-controls="flush-collapseTickets">
+                        <div class="d-flex justify-content-between align-items-center bg-primary px-3 w-100">
+                           <div class="fs-lg py-3 text-uppercase fw-bolder text-white">My Tickets</div>
+                           <span class="badge bg-white text-black">4</span>
+                        </div>
+                     </button>
+                  </h2>
+                  <div id="flush-collapseTickets" class="accordion-collapse collapse" aria-labelledby="flush-headingTicket" data-bs-parent="accordionGetTickets">
+                     <div class="accordion-body">
+                        <div class="container border px-3 p-md-4">
+                           <div class="get-ticket border-bottom w-100 d-flex justify-content-between align-items-center py-3">
+                              <div class="get-ticket-seat fs-xsm fw-bolder">
+                                 <p class="m-0">Seat A11</p>
+                              </div>
+                              <div class="d-flex justify-content-end align-items-center">
+                                 <div class="get-ticket-price fs-sm fw-bolder">
+                                    £10
+                                 </div>
+                                 <div class="ps-2 d-flex align-items-center">
+                                    <button class="btn-delete">
+                                       <img src="./images/icons/delete-bin-red.svg" alt="">
+                                    </button>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="get-ticket border-bottom w-100 d-flex justify-content-between align-items-center py-3">
+                              <div class="get-ticket-seat fs-xsm fw-bolder">
+                                 <p class="m-0">Seat A11</p>
+                              </div>
+                              <div class="d-flex justify-content-end align-items-center">
+                                 <div class="get-ticket-price fs-sm fw-bolder">
+                                    £10
+                                 </div>
+                                 <div class="ps-2 d-flex align-items-center">
+                                    <button class="btn-delete">
+                                       <img src="./images/icons/delete-bin-red.svg" alt="">
+                                    </button>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="d-flex justify-content-center my-3">
+                              <a href="./basket.html" class="btn btn-x-small fw-bolder">book tickets</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container-fluid d-none d-lg-block px-0">
+            <div class="d-flex justify-content-between align-items-center bg-primary px-3">
+               <div class="fs-lg py-3 text-uppercase fw-bolder text-white">My Tickets</div>
+               <span class="badge bg-white text-black">4</span>
+            </div>
+            <div class="container border px-3 p-md-4">
+               <div class="get-ticket border-bottom w-100 d-flex justify-content-between align-items-center py-3">
+                  <div class="get-ticket-seat fs-xsm fw-bolder">
+                     <p class="m-0">Seat A11</p>
+                  </div>
+                  <div class="d-flex justify-content-end align-items-center">
+                     <div class="get-ticket-price fs-sm fw-bolder">
+                        £10
+                     </div>
+                     <div class="ps-2 d-flex align-items-center">
+                        <button class="btn-delete">
+                           <img src="./images/icons/delete-bin-red.svg" alt="">
+                        </button>
+                     </div>
+                  </div>
+               </div>
+               <div class="get-ticket border-bottom w-100 d-flex justify-content-between align-items-center py-3">
+                  <div class="get-ticket-seat fs-xsm fw-bolder">
+                     <p class="m-0">Seat A11</p>
+                  </div>
+                  <div class="d-flex justify-content-end align-items-center">
+                     <div class="get-ticket-price fs-sm fw-bolder">
+                        £10
+                     </div>
+                     <div class="ps-2 d-flex align-items-center">
+                        <button class="btn-delete">
+                           <img src="./images/icons/delete-bin-red.svg" alt="">
+                        </button>
+                     </div>
+                  </div>
+               </div>
+               <div class="d-flex justify-content-center mt-3">
+                  <a href="./basket.html" class="btn btn-x-small fw-bolder">book tickets</a>
+               </div>
+            </div>
+         </div>
+         
+      </div>
+   </div>
+   
+</div>
+
+   <script>
+	let TicketCount = 0;
+	let TicketTotal = 0;
+    new seatsio.SeatingChart({
+        divId: 'chart',
+        workspaceKey: 'b46a628f-bbda-4cb9-b583-74cf885b8f5d',
+        event: 'luther---luther-vandross-experience-19-11-22',
+        session: 'continue',
+        pricing: [
+        {'category': 1, 'price': 10},{'category': 2, 'price': 9},{'category': 3, 'price': 8}
+        ], 
+        priceFormatter: function(price) {
+            return '£' + price;
+        },
+         onObjectSelected: function(object){
+			if (object.objectType=='Seat') {
+				var MyID = object.id;
+				var MyPrice = object.pricing.price;
+				console.log(MyID+' '+MyPrice);
+				console.dir(object);
+				TicketCount++;
+				TicketTotal=TicketTotal+parseFloat(MyPrice);
+				document.getElementById("BasketCount").innerHTML = TicketCount;
+				document.getElementById("BasketCount2").innerHTML = TicketCount;
+				document.getElementById("BasketTotal").innerHTML = '&pound;'+TicketTotal.toFixed(2);
+			}
+		},
+		onObjectDeselected: function(object){
+			if (object.objectType=='Seat') {
+				var MyID = object.id;
+				var MyPrice = object.pricing.price;
+				console.log("Deselected "+MyID);
+				console.dir(object);
+				TicketTotal=TicketTotal-parseFloat(MyPrice);
+				TicketCount--;
+				document.getElementById("BasketCount").innerHTML = TicketCount;
+				document.getElementById("BasketCount2").innerHTML = TicketCount;
+				document.getElementById("BasketTotal").innerHTML = '&pound;'+TicketTotal.toFixed(2);
+			}
+		},
+        selectedObjectsInputName: 'SelectedSeats' ,
+        holdTokenInputName: 'HoldToken'       
+    }).render();
+     
+   </script>
+
+
+<!-- Footer -->
+   
+   <script src="./Js-Css/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+.container-basket{
+   ul, li{
+      text-decoration: none;
+      list-style-type: none;
+      padding: 0;
+   }
+   .basket-li-title-quantity{
+      width: 100px;
+   }
+   .basket-li-title-subtotal{
+      width: 150px;
+   }
+   .container-plus-minus{
+      height: 60px;
+      width: 100px;
+      
+   }
+   .form-option-label{
+      border-color: $secondary;
+      color: $secondary;
+   }
+   .form-control{
+      border: none;
+      border-bottom: none;
+      height: 2rem;
+   }
+   .minus-button, .plus-button{
+      background-color: transparent;
+      border-color: transparent;
+   }
+   .product-delete-button{
+      background: none;
+      border: none;
+   }
+   .price-subtotal-column{
+      width: 150px;
+   }
+   .form-select {
+      height: 60px;
+   }
+}

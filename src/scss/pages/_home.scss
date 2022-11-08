@@ -1,0 +1,37 @@
+.container-hero{
+   background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 60%, transparent 90%);
+   background-image: url("https://uk.tmconst.com/ccp-salesforce-images/UK/_1440x450LOUIST_1810.png?auto=webp");
+   min-height: 30vw;
+   background-repeat: no-repeat;
+   width: 100%;
+   background-position: 50% 0px;
+   background-size: cover;
+   box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 20px 0px;
+}
+
+.container-artist{
+   background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 60%, transparent 90%);
+   background-image: url("https://uk.tmconst.com/ccp-salesforce-images/UK/_1440x450LOUIST_1810.png?auto=webp");
+   min-height: 20vw;
+   background-repeat: no-repeat;
+   width: 100%;
+   background-position: 50% 0px;
+   background-size: cover;
+   box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 20px 0px;
+}
+
+.container-resume-seating{
+   background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 19%, rgba(0,0,0,1) 100%);
+   //background-image: url("https://media.ticketmaster.co.uk/tm/en-gb/dam/a/617/842d0122-73b4-4130-8ca3-4dd22f6eb617_1819611_EVENT_DETAIL_PAGE_16_9.jpg");
+   width: 100%;
+   height: auto;
+   background-position: center center;
+   background-size: cover;
+   //filter: blur(15px);
+}
+
+.container-hero-text{
+   margin-left: 40px;
+   padding: 40px;
+   max-width: 600px;
+}

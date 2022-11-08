@@ -1,0 +1,40 @@
+.container-product-page{
+   .form-check-input{
+      width: 2.5rem;
+      height: 2.5rem;
+      
+      &[type="checkbox"]{
+        border-radius: 0;
+      }
+      &[type="radio"]{
+        border-radius: 50%;
+      }
+      &:active{
+        filter: $form-check-input-active-filter;
+      }
+      &:focus{
+        border-color: $black;
+        outline: 0;
+        box-shadow: none;
+      }
+      &:checked{
+        background-color: $black;
+        border-color: $black;
+        background-image: none;
+        border: 1px solid red;
+        outline: 2px solid red;
+        
+      }
+    }
+   .form-option-label{
+      border-color: $secondary;
+      color: $secondary;
+   }
+   .form-control{
+      border-bottom: none;
+   }
+   .minus-button, .plus-button{
+      background-color: transparent;
+      border-color: transparent;
+   }
+}

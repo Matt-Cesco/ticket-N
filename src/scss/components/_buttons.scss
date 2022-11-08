@@ -1,0 +1,128 @@
+.btn-primary {
+   color: $white;
+   background-color: $primary;
+   border-color: $black;
+   border-radius: 0;
+   text-transform: uppercase;
+   font-weight: 500;
+   letter-spacing: 2px;
+   padding: 1.25rem;
+   &:hover{
+      color: $white;
+      background-color: $primary;
+      border-color: $secondary;
+   }
+}
+.btn-secondary {
+   color: $black;
+   background-color: $secondary;
+   border-color: $black;
+   border-radius: 0;
+   text-transform: uppercase;
+   font-weight: 500;
+   letter-spacing: 2px;
+   padding: 1.25rem;
+   &:hover{
+      color: $black;
+      background-color: $secondary;
+      border-color: $black;
+   }
+}
+.btn-checkout {
+   color: $white;
+   background-color: $primary;
+   border-color: $black;
+   border-radius: 0;
+   text-transform: uppercase;
+   font-weight: 400;
+   letter-spacing: 1.1px;
+   padding: 1.085rem;
+   &:hover{
+      color: $white;
+      background-color: $primary;
+      border-color: $secondary;
+   }
+   a{
+      color: $white;
+   }
+}
+.btn-small {
+   color: $white;
+   background-color: $primary;
+   border-color: $black;
+   border-radius: 0;
+   text-transform: uppercase;
+   font-size: 0.9rem;
+   font-weight: 400;
+   letter-spacing: 1.1px;
+   padding: 0.885rem;
+   &:hover{
+      color: $white;
+      background-color: $primary;
+      border-color: $secondary;
+   }
+   a{
+      color: $white;
+   }
+}
+.btn-x-small {
+   color: $white;
+   background-color: $primary;
+   border-color: $black;
+   border-radius: 0;
+   text-transform: uppercase;
+   font-size: 0.9rem;
+   font-weight: 400;
+   letter-spacing: 1.1px;
+   padding: 0.585rem 1.385rem;
+   &:hover{
+      color: $white;
+      background-color: $primary;
+      border-color: $secondary;
+   }
+   a{
+      color: $white;
+   }
+}
+.btn-outline-primary {
+   color: $primary;
+   background-color: none;
+   border-color: $primary;
+   border-radius: 0;
+   text-transform: uppercase;
+   font-size: 0.75rem;
+   font-weight: 400;
+   letter-spacing: 1px;
+   padding: 0.485rem;
+   &:hover{
+      color: $primary;
+      background-color: $white;
+      border-color: $secondary;
+   }
+   a{
+      color: $primary;
+   }
+}
+.btn-delete{
+   background: none;
+   border: none;
+}
+.accordion-button{
+   &:not(.collapsed){
+      color: $black;
+      background-color: transparent;
+      box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+      &::after{
+         color: $secondary;
+      }
+   }
+   &:focus {
+      z-index: 3;
+      border-color: $white;
+      box-shadow: none;
+   }
+}
+
+.accordion-button:after {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}

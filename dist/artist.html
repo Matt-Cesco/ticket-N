@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" media="screen" href="./Js-Css/style.css">
+</head>
+<body style="overflow-x: hidden;">
+   <!-- Header -->
+   <header class="container-fluid navbar-sticky" id="header" class="pt-2 pb-2">
+      <!-- Navbar Desktop -->
+      <div class="container-fluid my-3 px-1 px-xl-5 d-none d-xxl-block">
+         <div class="row align-items-center">
+            <div class="col-lg-8">
+               <div class="d-flex">
+                  <div class="logo">
+                     <a href="./index.html">
+                        <img class="img-fluid" src="./images/tnLogo.png" alt="" srcset="">
+                     </a>
+                  </div>
+                  <div class="menu d-flex justify-content-start mx-3">
+                     <nav class="navbar p-0 text-center d-flex justify-content-between">
+                        <div class="collapse navbar-collapse d-flex justify-content-center">
+                           <div class="d-flex justify-content-between align-items-center">
+                              <div class="nav-item">
+                                 <a class="nav-link fs-sm fw-bolder text-uppercase px-3" href="./category-page.html">
+                                    concerts
+                                 </a>
+                              </div>
+                              <div class="nav-item">
+                                 <a class="nav-link fs-sm fw-bolder text-uppercase px-3" href="./category-page.html">
+                                    arts & theater
+                                 </a>
+                              </div>
+                              <div class="nav-item">
+                                 <a class="nav-link fs-sm fw-bolder text-uppercase px-3" href="./category-page.html">
+                                    festivals
+                                 </a>
+                              </div>
+                              <div class="nav-item">
+                                 <a class="nav-link fs-sm fw-bolder text-uppercase px-3" href="./category-page.html">
+                                    sports
+                                 </a>
+                              </div>
+                              <div class="nav-item">
+                                 <a class="nav-link fs-sm fw-bolder text-uppercase secondary-color px-3" href="">
+                                    river rooms
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-3 d-flex justify-content-end">
+               <div class="container py-4 px-0">
+                  <form id="frmSearch" action="/Search/" method="get" class="">
+                     <div class="input-group d-flex px-md-2">
+                        <div class="flex-fill">
+                           <input class="form-control shadow-none" type="text" name="Query" placeholder="Search for an Artist, Event or Venue">
+                        </div>
+                        <div class="input-group-append">
+                           <button class="btn btn-primary p-3" type="submit" aria-label="Search">
+                              <img src="./images/icons/search.svg" height="18" width="24" alt="" srcset="">
+                           </button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+            <div class="col-lg-1 currencies-login d-flex justify-content-end">        
+               <div class="cart-login align-items-center"> 
+                  <ul class="list-inline list-unstyled mb-0">
+                     <li class="list-inline-item mx-3">
+                        <a class="login" href="./account-page.html">
+                           <img src="./images/icons/user-profile-avatar-svgrepo-com.svg" height="22" alt="" srcset="">
+                        </a>
+                     </li>
+                     <li class="list-inline-item image-container-basket">
+                        <a class="basket" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                           <img src="./images/icons/bag.svg" height="24" alt="" srcset="">
+                        </a>
+                        <a href="#offcanvasExample" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasExample">
+                           <span class="product-thumbnail-quantity" aria-hidden="true" id="BasketCount2">0</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      <!-- Navbar Mobile -->
+      <div class="container my-3 b-block d-xxl-none">
+         <div class="row align-items-center">
+            <div class="col-4 d-flex justify-content-start px-3">
+               <div class="menu-search-mobile d-flex align-items-center"> 
+                  <div class="menu-mobile-button">
+                     <div class="hamburger-icon" id="icon">
+                        <div class="icon-1" id="a"></div>
+                        <div class="icon-2" id="b"></div>
+                        <div class="icon-3" id="c"></div>
+                        <div class="clear"></div>
+                      </div>
+                  </div>
+                  <div class="search-mobile-button ms-4 mb-1">
+                     <img src="./images/icons/search-black.svg" height="19" alt="" srcset="">
+                  </div>
+               </div>
+            </div>
+            <div class="col-4 d-flex justify-content-center">
+               <div class="center logo">
+                  <a href="./index.html">
+                     <img class="img-fluid" src="./images/tnLogo.png" alt="" srcset="">
+                  </a>        
+               </div>
+            </div>
+            <div class="col-4 d-flex justify-content-end px-4">
+               <div class="cart-login-mobile d-flex align-items-center"> 
+                  <a class="profile-mobile-button d-flex align-items-center" href="./account-page.html">
+                     <img src="./images/icons/person.svg" height="26" alt="" srcset="">
+                  </a>
+                  <div class="basket-mobile-button image-container-basket d-flex align-items-center ps-3">
+                     <a class="basket mb-1" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                        <img src="./images/icons/bag.svg" height="22" alt="" srcset="">
+                     </a>
+                     <a href="#offcanvasExample" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasExample">
+                        <span class="product-thumbnail-quantity" aria-hidden="true" id="BasketCount">0</span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="container py-4 search-bar-appear-mobile">
+               <form id="frmSearch" action="/Search/" method="get">
+                  <div class="input-group d-flex justify-content-center d-block d-xxl-none w-100 px-2">
+                     <input class="form-control shadow-none w-50" type="text" name="Query" placeholder="Search...">
+                     <div class="input-group-append">
+                        <button class="btn btn-secondary p-3" type="submit" aria-label="Search">
+                           <img src="./images/icons/search.svg" height="18" alt="" srcset="">
+                        </button>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+      <!-- OffCanvas Basket Menu -->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+         <div class="offcanvas-header">
+            <div class="basket-icon-title d-flex align-items-center">
+               <div class="basket-icon px-2 d-flex justify-content-center align-items-center">
+                  <img src="./images/icons/bag.svg" height="22" alt="" srcset="">
+               </div>
+               <div class="basket-title fs-xl fw-bold py-2">
+                  My Tickets
+               </div>
+            </div>
+           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+         </div>
+         <div class="offcanvas-body p-0">
+            <div class="container container-side-basket d-flex flex-column h-100">
+               <div class="container flex-grow-1 px-0">
+                  <hr class="m-0">
+                  <!-- Basket Item -->
+                  <div class="container basket-item px-3 py-4">
+                     <div class="row">
+                        <div class="col-12">
+                           <div class="side-basket-title-product-price w-100 d-flex justify-content-between">
+                              <div class="side-basket-product-title fs-xsm fw-bolder">
+                                 <p>Luther - Luther Vandross Experience</p>
+                                 <p class="m-0">Seat A11</p>
+                              </div>
+                              <div class="side-basket-ticket-price fs-sm fw-bolder">
+                                 £10
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <hr>
+                  <!-- Basket Item -->
+                  <div class="container basket-item px-3 py-4">
+                     <div class="row">
+                        <div class="col-12">
+                           <div class="side-basket-title-product-price w-100 d-flex justify-content-between">
+                              <div class="side-basket-product-title fs-xsm fw-bolder">
+                                 <p>Luther - Luther Vandross Experience</p>
+                                 <p class="m-0">Seat A11</p>
+                              </div>
+                              <div class="side-basket-ticket-price fs-sm fw-bolder">
+                                 £10
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="container">
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="d-flex justify-content-between">
+                           <div class="side-basket-total-title fs-sm fst-normal">
+                              Delivery
+                           </div>
+                           <div class="side-basket-total-price fs-sm fst-italic">
+                              Calculated at checkout
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row py-2">
+                     <div class="col-12">
+                        <div class="d-flex justify-content-between">
+                           <div class="side-basket-total-title fs-sm fw-bolder">
+                              Subtotal
+                           </div>
+                           <div class="side-basket-total-price fs-sm fw-bolder" id="BasketTotal">£0.00
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="container py-3">
+                     <div class="row">
+                        <a class="btn btn-secondary fs-sm" href="./basket.html">View Basket</a>
+                     </div>
+                  </div>
+                  <div class="container pb-4">
+                     <div class="row">
+                        <a class="btn btn-primary fs-sm" href="./checkout-info.html">Checkout</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+   <!-- Mobile Menu -->
+   <div class="container-fluid nav-content-mobile">
+      <ul class="container navlinks-menu d-column-flex align-items-center pt-5">
+         <li class="navlink-mobile fs-lg">
+            <a class="fw-bolder">
+               concerts
+            </a>
+         </li>
+         <hr class="my-2">
+         <li class="navlink-mobile fs-lg">
+            <a class="fw-bolder">
+               arts & theater
+            </a>
+         </li>
+         <hr class="my-2">
+         <li class="navlink-mobile fs-lg">
+            <a class="fw-bolder">
+               festivals
+            </a>
+         </li>
+         <hr class="my-2">
+         <li class="navlink-mobile fs-lg">
+            <a class="fw-bolder">
+               sports
+            </a>
+         </li>
+         <hr class="my-2">
+         <li class="navlink-mobile fs-lg">
+            <a class="fw-bolder">
+               river rooms
+            </a>
+         </li>
+      </ul>
+   </div>
+<main class="container-fluid">
+   <!-- Section banner -->
+   <section class="container-fluid container-artist d-flex flex-column justify-content-center position-relative text-white">
+      <div class="container container-artist-text">
+         <div class="row">
+            <div class="col-lg-12">
+               <div class="">
+                  <p class="fs-lg">Saturday 3 December / Tottenham Hotspur Stadium, London</p>
+                  <p class="fs-xxxl fw-bolder">Luther Vandross</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- Section content -->
+   <section class="container py-5">
+      <div class="row">
+         <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active fs-sm fw-bolder text-uppercase py-3 px-4" id="events-tab" data-bs-toggle="tab" data-bs-target="#events-tab-pane" type="button" role="tab" aria-controls="events-tab-pane" aria-selected="true">Events</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link fs-sm fw-bolder text-uppercase py-3 px-4" id="gallery-tab" data-bs-toggle="tab" data-bs-target="#gallery-tab-pane" type="button" role="tab" aria-controls="gallery-tab-pane" aria-selected="false">Gallery</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link fs-sm fw-bolder text-uppercase py-3 px-4" id="about-tab" data-bs-toggle="tab" data-bs-target="#about-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">About</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <!-- Events -->
+            <div class="tab-pane fade show active px-0" id="events-tab-pane" role="tabpanel" aria-labelledby="events-tab" tabindex="0">
+               <!-- Container events -->
+               <div class="container-fluid py-5 px-0">
+                  <div class="container-fluid">
+                     <div class="row">
+                        <div class="col-lg-8">
+                           <!-- event line -->
+                           <div class="container">
+                              <div class="row">
+                                 <div class="col-lg-12 border-bottom border-dark p-3">
+                                    <div class="container-fluid d-flex justify-content-between align-content-center px-0">
+                                       <div class="d-flex px-0">
+                                          <div class="date-container text-center px-3 fw-bolder">
+                                             <div class="cont-event-month text-uppercase">nov</div>
+                                             <div class="cont-event-day">10</div>
+                                             <div class="cont-event-year">2023</div>
+                                          </div>
+                                          <div class="alldata-container border-start px-3">
+                                             <div class="d-flex text-muted">Fri - 18:00</div>
+                                             <div class="fw-bolder">Stourbridge - The River Rooms</div>
+                                             <div class="text-muted">Luther Vandross</div>
+                                          </div>
+                                       </div>
+                                       <div class="d-flex justify-content-end my-auto">
+                                          <a class="btn btn-small" href="./buy-ticket-page.html">Buy Tickets</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- event line -->
+                           <div class="container">
+                              <div class="row">
+                                 <div class="col-lg-12 border-bottom border-dark p-3">
+                                    <div class="container-fluid d-flex justify-content-between align-content-center px-0">
+                                       <div class="d-flex px-0">
+                                          <div class="date-container text-center px-3 fw-bolder">
+                                             <div class="cont-event-month text-uppercase">nov</div>
+                                             <div class="cont-event-day">11</div>
+                                             <div class="cont-event-year">2023</div>
+                                          </div>
+                                          <div class="alldata-container border-start px-3">
+                                             <div class="d-flex text-muted">Sat - 18:00</div>
+                                             <div class="fw-bolder">Sheffield - Uilita Arena Sheffield</div>
+                                             <div class="text-muted">Luther Vandross</div>
+                                          </div>
+                                       </div>
+                                       <div class="d-flex justify-content-end my-auto">
+                                          <a class="btn btn-small" href="./buy-ticket-page.html">Buy Tickets</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-4">
+                           <div class="container border p-3">
+                              <p class="fs-sm fw-bolder">Ticket Nation on facebook</p>
+                              <div class="d-flex">
+                                 <div>
+                                    <img class="img-fluid" src="./images/Luther-Square.jpg" width="65" alt="">
+                                 </div>
+                                 <div class="px-2">
+                                    <p class="fs-sm m-0">
+                                       Ticket Nation
+                                    </p>
+                                    <p class="fs-sm">
+                                       79K likes
+                                    </p>
+                                 </div>
+                              </div>
+                              <button class="btn">Like facebook page</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+            </div>
+            <!-- Gallery -->
+            <div class="tab-pane fade" id="gallery-tab-pane" role="tabpanel" aria-labelledby="gallery-tab" tabindex="0">
+               <div class="container py-5">
+                  <div class="row">
+                     <div class="col-lg-3">
+                        <img class="img-fluid" src="./images/Luther-Square.jpg" alt="">
+                     </div>
+                     <div class="col-lg-3">
+                        <img class="img-fluid" src="./images/Luther-Square.jpg" alt="">
+                     </div>
+                     <div class="col-lg-3">
+                        <img class="img-fluid" src="./images/Luther-Square.jpg" alt="">
+                     </div>
+                     <div class="col-lg-3">
+                        <img class="img-fluid" src="./images/Luther-Square.jpg" alt="">
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- About -->
+            <div class="tab-pane fade" id="about-tab-pane" role="tabpanel" aria-labelledby="about-tab" tabindex="0">
+               <div class="container py-5">
+                  <div class="row">
+                     <div class="col-md-5">
+                        <p class="fs-xxxl fw-bolder">About</p>
+                        <p class="fs-md fw-bolder py-3">One-fifth of one of the biggest boybands in history and chart-topping solo artist </p>
+                        <p class="fs-md">Raised in South Yorkshire, Louis Tomlinson (born Louis Austin) first auditioned for The X Factor in 2009 but didn’t get selected, so he returned in 2010. The judges felt instead of a soloist he would be better partnered with four other contestants – Niall Horan, Zayn Malik, Liam Payne and Harry Styles – and hence, One Direction was conceived. Although the vocal group placed third during The X Factor’s seventh season, they went on to become one of the decade’s biggest acts, scoring numerous No.1 hits like 'What Makes You Beautiful', 'Story Of My Life', 'Drag Me Down', 'Little Things' and the cover 'One Way Or Another (Teenage Kicks)'.</p>
+                        <p class="fs-md">In 2020, Tomlinson’s debut studio album Walls arrived, spawning five singles: 'Two Of Us', 'Kill My Mind', 'We Made It', 'Don’t Let It Break Your Heart' and the title track. Two years later, Tomlinson returned with the announcement of his sophomore album titled Faith in the Future and released the lead single 'Bigger Than Me' in September of that year. To support the new album, he also announced a string of UK tour dates for the latter part of 2023.</p>
+                     </div>
+                     <div class="col-md-6 offset-md-1">
+                        <img class="img-fluid" src="./images/Luther-portrait.jpg" alt="">
+                     </div>
+                  </div>
+               </div>
+            </div>
+          </div>             
+      </div>
+   </section>
+   
+</main>
+<!-- Footer -->
+   <footer class="footer bg-black p-3 pt-5">
+      <div class="container">
+         <div class="row pb-2">
+            <div class="col-md-3 col-sm-6 col-6">
+               <ul>
+                  <li class="fs-md fw-bolder py-2">About Us</li>
+                  <li class="fs-sm py-1"><a href="">Our story</a></li>
+                  <li class="fs-sm py-1"><a href="">Blog</a></li>
+                  <li class="fs-sm py-1"><a href="">FAQ</a></li>
+               </ul>
+            </div>
+            <div class="col-md-3 col-sm-6">
+               <ul>
+                  <li class="fs-md fw-bolder py-2">Customer support</li>
+                  <li class="fs-sm py-1"><a href="">Shipping info</a></li>
+                  <li class="fs-sm py-1"><a href="">Terms & Conditions</a></li>
+                  <li class="fs-sm py-1"><a href="">Refunds & returns</a></li>
+               </ul>
+            </div>
+            <div class="col-md-3 col-sm-6">
+               <ul class="list-unstyled">
+                  <li class="fs-md fw-bolder py-2">Get in touch</li>
+                  <li class="fs-sm py-1">Ellis Live</li>
+                  <li class="fs-sm py-1">Unit 1, Block L</li>
+                  <li class="fs-sm py-1">Mill Race Lane</li>
+                  <li class="fs-sm py-1">DY8 1JN</li>
+                  <li class="fs-sm py-1">Stourbridge</li>
+                  <li class="fs-sm py-1">West Midlands</li>
+                     <a class="fs-sm m-0" href="mailto:info@ellielive.co.uk">Email: info@ellislive.co.uk</a>
+                  </li>
+                  <li class="fs-sm py-1">
+                     <div class="fs-sm">Tel: 1111 11111</div>
+                  </li>
+               </ul>
+            </div>
+            <div class="col-md-3 col-sm-6">
+               <ul>
+                  <li class="fs-md fw-bolder py-2">Follow us</li>
+                  <div class="col-md-12 pb-3">
+                     <a href=""><img src="./images/icons/facebook-white.svg" class="py-1" alt="" srcset=""></a>
+                     <a href=""><img src="./images/icons/instagram-white.svg" class="px-2 py-1" alt="" srcset=""></a>
+                  </div>
+                  <li class="fs-md fw-bolder py-2">We accept</li>
+                  <div class="col-md-12 pb-3">
+                     <img class="d-inline-block py-1" src="./images/cards-alt.png" alt="Payment methods" width="210">
+                  </div>
+               </ul>
+            </div>
+   
+   
+         </div>
+      </div>
+      <div id="pnlacceptcookie" class="cookie-alert clearfix d-none">
+         <div>
+            <p>We use cookies to give you the best service on our site. By continuing to use the site you consent to our <a
+                  href="/privacy-policy.htm" class="pe-3">Privacy Policy.</a> <button href="#" id="btnacceptcookie"
+                  class="btn btn-primary">I Accept</button></p>
+         </div>
+      </div>
+   </footer>
+   <script src="./Js-Css/main.js"></script>
+</body>
+</html>

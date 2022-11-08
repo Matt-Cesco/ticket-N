@@ -1,0 +1,23 @@
+
+
+.pagination{
+   a{
+      padding: 1rem 1.25rem;
+      color: $black;
+      border-radius: 0;
+   }
+   .page-item:first-child .page-link {
+      border-top-left-radius: 0rem;
+      border-bottom-left-radius: 0rem;
+   }
+   .page-item:last-child .page-link {
+      border-top-right-radius: 0rem;
+      border-bottom-right-radius: 0rem;
+   }
+   .page-item.disabled .page-link {
+      color: #6c757d;
+      pointer-events: none;
+      background-color: #fff;
+      border-color: #dee2e6;
+   }
+}

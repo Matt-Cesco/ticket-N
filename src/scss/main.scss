@@ -1,0 +1,31 @@
+
+
+// Import Bootstrap
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+// Variables: colors - typography
+@import './variables/typography';
+@import './variables/colors';
+
+// Components: buttons - carousel - slider
+@import './components/buttons';
+@import './components/carousel';
+@import './components/form-check';
+@import './components/slider';
+@import './components/product-card';
+
+// Layout: header - footer - forms
+@import './layout/header';
+@import './layout/forms';
+@import './layout/footer';
+
+// Pages: home - about ecc
+@import './pages/home';
+@import './pages/contact';
+@import './pages/category-page';
+@import './pages/product-page';
+@import './pages/container-iframe';
+@import './pages/basket';
+@import './pages/checkout';
+
+

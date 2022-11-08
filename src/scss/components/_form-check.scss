@@ -1,0 +1,43 @@
+//
+// Check/radio
+//
+
+.form-check-input {
+  &[type="checkbox"] {
+    border-radius: 0;
+  }
+
+  &[type="radio"] {
+    border-radius: 0;
+  }
+
+  &:active {
+    filter: $form-check-input-active-filter;
+  }
+
+  &:focus {
+    border-color: $black;
+    outline: 0;
+    box-shadow: none;
+  }
+
+  &:checked {
+    background-color: $black;
+    border-color: $black;
+  }
+
+}
+
+.container-newsletter{
+  .form-control{
+    padding: 1.8rem 0rem;
+  }
+}
+
+.container-contact-form, .container-account{
+   .form-control{
+      font-size: .9rem;
+      font-weight: 300;
+      line-height: 1.2;
+   }
+}

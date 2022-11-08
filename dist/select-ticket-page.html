@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" media="screen" href="./Js-Css/style.css">
+</head>
+<body style="overflow-x: hidden;">
+   <!-- Header -->
+   <header class="container-fluid navbar-sticky" id="header" class="pt-2 pb-2">
+      <!-- Navbar Desktop -->
+      <div class="container-fluid my-3 px-1 px-xl-5 d-none d-xxl-block">
+         <div class="row align-items-center">
+            <div class="col-lg-8">
+               <div class="d-flex">
+                  <div class="logo">
+                     <a href="./index.html">
+                        <img class="img-fluid" src="./images/tnLogo.png" alt="" srcset="">
+                     </a>
+                  </div>
+                  <div class="menu d-flex justify-content-start mx-3">
+                     <nav class="navbar p-0 text-center d-flex justify-content-between">
+                        <div class="collapse navbar-collapse d-flex justify-content-center">
+                           <div class="d-flex justify-content-between align-items-center">
+                              <div class="nav-item">
+                                 <a class="nav-link fs-sm fw-bolder text-uppercase px-3" href="./category-page.html">
+                                    concerts
+                                 </a>
+                              </div>
+                              <div class="nav-item">
+                                 <a class="nav-link fs-sm fw-bolder text-uppercase px-3" href="./category-page.html">
+                                    arts & theater
+                                 </a>
+                              </div>
+                              <div class="nav-item">
+                                 <a class="nav-link fs-sm fw-bolder text-uppercase px-3" href="./category-page.html">
+                                    festivals
+                                 </a>
+                              </div>
+                              <div class="nav-item">
+                                 <a class="nav-link fs-sm fw-bolder text-uppercase px-3" href="./category-page.html">
+                                    sports
+                                 </a>
+                              </div>
+                              <div class="nav-item">
+                                 <a class="nav-link fs-sm fw-bolder text-uppercase secondary-color px-3" href="">
+                                    river rooms
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-3 d-flex justify-content-end">
+               <div class="container py-4 px-0">
+                  <form id="frmSearch" action="/Search/" method="get" class="">
+                     <div class="input-group d-flex px-md-2">
+                        <div class="flex-fill">
+                           <input class="form-control shadow-none" type="text" name="Query" placeholder="Search for an Artist, Event or Venue">
+                        </div>
+                        <div class="input-group-append">
+                           <button class="btn btn-primary p-3" type="submit" aria-label="Search">
+                              <img src="./images/icons/search.svg" height="18" width="24" alt="" srcset="">
+                           </button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+            <div class="col-lg-1 currencies-login d-flex justify-content-end">        
+               <div class="cart-login align-items-center"> 
+                  <ul class="list-inline list-unstyled mb-0">
+                     <li class="list-inline-item mx-3">
+                        <a class="login" href="./account-page.html">
+                           <img src="./images/icons/user-profile-avatar-svgrepo-com.svg" height="22" alt="" srcset="">
+                        </a>
+                     </li>
+                     <li class="list-inline-item image-container-basket">
+                        <a class="basket" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                           <img src="./images/icons/bag.svg" height="24" alt="" srcset="">
+                        </a>
+                        <a href="#offcanvasExample" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasExample">
+                           <span class="product-thumbnail-quantity" aria-hidden="true" id="BasketCount2">0</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      <!-- Navbar Mobile -->
+      <div class="container my-3 b-block d-xxl-none">
+         <div class="row align-items-center">
+            <div class="col-4 d-flex justify-content-start px-3">
+               <div class="menu-search-mobile d-flex align-items-center"> 
+                  <div class="menu-mobile-button">
+                     <div class="hamburger-icon" id="icon">
+                        <div class="icon-1" id="a"></div>
+                        <div class="icon-2" id="b"></div>
+                        <div class="icon-3" id="c"></div>
+                        <div class="clear"></div>
+                      </div>
+                  </div>
+                  <div class="search-mobile-button ms-4 mb-1">
+                     <img src="./images/icons/search-black.svg" height="19" alt="" srcset="">
+                  </div>
+               </div>
+            </div>
+            <div class="col-4 d-flex justify-content-center">
+               <div class="center logo">
+                  <a href="./index.html">
+                     <img class="img-fluid" src="./images/tnLogo.png" alt="" srcset="">
+                  </a>        
+               </div>
+            </div>
+            <div class="col-4 d-flex justify-content-end px-4">
+               <div class="cart-login-mobile d-flex align-items-center"> 
+                  <a class="profile-mobile-button d-flex align-items-center" href="./account-page.html">
+                     <img src="./images/icons/person.svg" height="26" alt="" srcset="">
+                  </a>
+                  <div class="basket-mobile-button image-container-basket d-flex align-items-center ps-3">
+                     <a class="basket mb-1" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                        <img src="./images/icons/bag.svg" height="22" alt="" srcset="">
+                     </a>
+                     <a href="#offcanvasExample" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasExample">
+                        <span class="product-thumbnail-quantity" aria-hidden="true" id="BasketCount">0</span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="container py-4 search-bar-appear-mobile">
+               <form id="frmSearch" action="/Search/" method="get">
+                  <div class="input-group d-flex justify-content-center d-block d-xxl-none w-100 px-2">
+                     <input class="form-control shadow-none w-50" type="text" name="Query" placeholder="Search...">
+                     <div class="input-group-append">
+                        <button class="btn btn-secondary p-3" type="submit" aria-label="Search">
+                           <img src="./images/icons/search.svg" height="18" alt="" srcset="">
+                        </button>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+      <!-- OffCanvas Basket Menu -->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+         <div class="offcanvas-header">
+            <div class="basket-icon-title d-flex align-items-center">
+               <div class="basket-icon px-2 d-flex justify-content-center align-items-center">
+                  <img src="./images/icons/bag.svg" height="22" alt="" srcset="">
+               </div>
+               <div class="basket-title fs-xl fw-bold py-2">
+                  My Tickets
+               </div>
+            </div>
+           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+         </div>
+         <div class="offcanvas-body p-0">
+            <div class="container container-side-basket d-flex flex-column h-100">
+               <div class="container flex-grow-1 px-0">
+                  <hr class="m-0">
+                  <!-- Basket Item -->
+                  <div class="container basket-item px-3 py-4">
+                     <div class="row">
+                        <div class="col-12">
+                           <div class="side-basket-title-product-price w-100 d-flex justify-content-between">
+                              <div class="side-basket-product-title fs-xsm fw-bolder">
+                                 <p>Luther - Luther Vandross Experience</p>
+                                 <p class="m-0">Seat A11</p>
+                              </div>
+                              <div class="side-basket-ticket-price fs-sm fw-bolder">
+                                 £10
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <hr>
+                  <!-- Basket Item -->
+                  <div class="container basket-item px-3 py-4">
+                     <div class="row">
+                        <div class="col-12">
+                           <div class="side-basket-title-product-price w-100 d-flex justify-content-between">
+                              <div class="side-basket-product-title fs-xsm fw-bolder">
+                                 <p>Luther - Luther Vandross Experience</p>
+                                 <p class="m-0">Seat A11</p>
+                              </div>
+                              <div class="side-basket-ticket-price fs-sm fw-bolder">
+                                 £10
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="container">
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="d-flex justify-content-between">
+                           <div class="side-basket-total-title fs-sm fst-normal">
+                              Delivery
+                           </div>
+                           <div class="side-basket-total-price fs-sm fst-italic">
+                              Calculated at checkout
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row py-2">
+                     <div class="col-12">
+                        <div class="d-flex justify-content-between">
+                           <div class="side-basket-total-title fs-sm fw-bolder">
+                              Subtotal
+                           </div>
+                           <div class="side-basket-total-price fs-sm fw-bolder" id="BasketTotal">£0.00
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="container py-3">
+                     <div class="row">
+                        <a class="btn btn-secondary fs-sm" href="./basket.html">View Basket</a>
+                     </div>
+                  </div>
+                  <div class="container pb-4">
+                     <div class="row">
+                        <a class="btn btn-primary fs-sm" href="./checkout-info.html">Checkout</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+   <!-- Mobile Menu -->
+   <div class="container-fluid nav-content-mobile">
+      <ul class="container navlinks-menu d-column-flex align-items-center pt-5">
+         <li class="navlink-mobile fs-lg">
+            <a class="fw-bolder">
+               concerts
+            </a>
+         </li>
+         <hr class="my-2">
+         <li class="navlink-mobile fs-lg">
+            <a class="fw-bolder">
+               arts & theater
+            </a>
+         </li>
+         <hr class="my-2">
+         <li class="navlink-mobile fs-lg">
+            <a class="fw-bolder">
+               festivals
+            </a>
+         </li>
+         <hr class="my-2">
+         <li class="navlink-mobile fs-lg">
+            <a class="fw-bolder">
+               sports
+            </a>
+         </li>
+         <hr class="my-2">
+         <li class="navlink-mobile fs-lg">
+            <a class="fw-bolder">
+               river rooms
+            </a>
+         </li>
+      </ul>
+   </div>
+   <!-- Product Image Price -->
+   <div class="container py-5 mb-5 container-product-page">
+      <div class="row">
+         <div class="col-lg-7">
+            <img class="img-fluid" src="./images/Luther-Square.jpg" alt="">
+         </div>
+         <div class="col-lg-5 ps-lg-4 d-flex justify-content-center align-items-center">
+            <div class="container px-1 px-md-4">
+               <p class="fs-xxxl fw-bolder pt-4 pt-lg-2">Luther Vandross</p>
+               <p class="fs-xl fw-bolder m-0">Derby The Flowerpot</p>
+               <div class="d-flex">
+                  <p class="fs-md m-0">Saturday</p>
+                  <p class="fs-md fw-bolder px-2">28 Jan 2023</p>
+               </div>
+               <div class="d-flex justify-content-between align-items-end">
+                  <p class="fs-xxl fw-normal m-0">&#163;13.00</p>
+                  <p class="fs-sm fw-bolder text-success mb-1">Available</p>
+                  <p class="fs-sm fw-bolder text-danger d-none mb-1">Out of stock</p>
+               </div>
+               <p class="fs-sm">1 Adult</p>
+               <hr>
+               <p class="fs-sm fw-bolder">This event is for over 18s only - No refunds will be issued for under 18s</p>
+               <hr>
+               <div class="container px-2 py-2">
+                  <div class="row d-flex justify-content-between align-items-center">
+                     <div class="col-12 d-flex justify-content-sm-end justify-content-start px-2">
+                        <a href="./select-seat.html" class="btn btn-primary w-100">Choose seats</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="container py-4 px-0">
+                  <div class="accordion accordion-flush" id="accordionFlushExample">
+                     <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                           <button class="accordion-button fs-sm fw-bolder px-0 px-lg-1" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
+                           Event Description
+                           </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                           <div class="accordion-body px-1 fs-sm">One of Europe’s most popular and exciting tribute acts bring a level of authenticity to the 80’s era, whilst still delivering a unique and organic show night after night. Complete with fully firing cannons, inflatable Rosie, and iconic Angus and Brian chemistry, AC/DC UK churn out all of the biggest hits alongside a few fan favourites at every show!</div>
+                        </div>
+                     </div>
+                     
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- Footer -->
+   <footer class="footer bg-black p-3 pt-5">
+      <div class="container">
+         <div class="row pb-2">
+            <div class="col-md-3 col-sm-6 col-6">
+               <ul>
+                  <li class="fs-md fw-bolder py-2">About Us</li>
+                  <li class="fs-sm py-1"><a href="">Our story</a></li>
+                  <li class="fs-sm py-1"><a href="">Blog</a></li>
+                  <li class="fs-sm py-1"><a href="">FAQ</a></li>
+               </ul>
+            </div>
+            <div class="col-md-3 col-sm-6">
+               <ul>
+                  <li class="fs-md fw-bolder py-2">Customer support</li>
+                  <li class="fs-sm py-1"><a href="">Shipping info</a></li>
+                  <li class="fs-sm py-1"><a href="">Terms & Conditions</a></li>
+                  <li class="fs-sm py-1"><a href="">Refunds & returns</a></li>
+               </ul>
+            </div>
+            <div class="col-md-3 col-sm-6">
+               <ul class="list-unstyled">
+                  <li class="fs-md fw-bolder py-2">Get in touch</li>
+                  <li class="fs-sm py-1">Ellis Live</li>
+                  <li class="fs-sm py-1">Unit 1, Block L</li>
+                  <li class="fs-sm py-1">Mill Race Lane</li>
+                  <li class="fs-sm py-1">DY8 1JN</li>
+                  <li class="fs-sm py-1">Stourbridge</li>
+                  <li class="fs-sm py-1">West Midlands</li>
+                     <a class="fs-sm m-0" href="mailto:info@ellielive.co.uk">Email: info@ellislive.co.uk</a>
+                  </li>
+                  <li class="fs-sm py-1">
+                     <div class="fs-sm">Tel: 1111 11111</div>
+                  </li>
+               </ul>
+            </div>
+            <div class="col-md-3 col-sm-6">
+               <ul>
+                  <li class="fs-md fw-bolder py-2">Follow us</li>
+                  <div class="col-md-12 pb-3">
+                     <a href=""><img src="./images/icons/facebook-white.svg" class="py-1" alt="" srcset=""></a>
+                     <a href=""><img src="./images/icons/instagram-white.svg" class="px-2 py-1" alt="" srcset=""></a>
+                  </div>
+                  <li class="fs-md fw-bolder py-2">We accept</li>
+                  <div class="col-md-12 pb-3">
+                     <img class="d-inline-block py-1" src="./images/cards-alt.png" alt="Payment methods" width="210">
+                  </div>
+               </ul>
+            </div>
+   
+   
+         </div>
+      </div>
+      <div id="pnlacceptcookie" class="cookie-alert clearfix d-none">
+         <div>
+            <p>We use cookies to give you the best service on our site. By continuing to use the site you consent to our <a
+                  href="/privacy-policy.htm" class="pe-3">Privacy Policy.</a> <button href="#" id="btnacceptcookie"
+                  class="btn btn-primary">I Accept</button></p>
+         </div>
+      </div>
+   </footer>
+   <script src="./Js-Css/main.js"></script>
+</body>
+</html>

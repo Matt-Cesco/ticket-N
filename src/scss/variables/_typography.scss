@@ -1,0 +1,65 @@
+@font-face{
+   font-family: 'Montserrat';
+   src: url('/src/fonts/Montserrat-Light.ttf') format('truetype');
+   font-display: swap;
+   font-weight: 400;
+}
+
+@font-face{
+   font-family: 'Montserrat';
+   src: url('/src/fonts/Montserrat-Regular.ttf') format('truetype');
+   font-display: swap;
+   font-weight: 400;
+}
+
+@font-face{
+   font-family: 'Montserrat';
+   src: url('/src/fonts/Montserrat-Bold.ttf') format('truetype');
+   font-display: swap;
+   font-weight: 800;
+}
+
+body{
+   font-family: 'Montserrat', sans-serif;
+}
+
+// Responsive break points
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+// Font sizes 
+
+.fs-xsm{
+   font-size: 0.8rem;
+   font-weight: 400;
+   line-height: 1;
+}
+.fs-sm{
+   font-size: 0.9rem;
+   font-weight: 400;
+   
+}
+.fs-md{
+   font-size: 1rem;
+   font-weight: 400;
+}
+.fs-lg{
+   font-size: 1.15rem;
+   font-weight: 400;
+}
+.fs-xl{
+   font-size: 1.3rem;
+   font-weight: 400;
+}
+.fs-xxl{
+   font-size: 1.75rem;
+   font-weight: 400;
+}
+.fs-xxxl{
+   font-size: 2rem;
+   font-weight: 800;
+}

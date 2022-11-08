@@ -1,0 +1,52 @@
+$white: #fff;
+$black: #1d1d1d;
+$grey: #f0f0f0;
+$primary: #2c5498;
+$secondary: #ff7b1e;
+$tertiary: #bce470;
+
+.bg-primary{
+   background-color: $primary !important;
+}
+.bg-secondary{
+   background-color: $secondary !important;
+}
+.bg-grey{
+   background-color: $grey;
+}
+.bg-white{
+   background-color: $white;
+}
+.primary-color{
+   color: $primary;
+}
+.secondary-color{
+   color: $secondary !important;
+}
+.text-white{
+   color: $white;
+}
+.text-black{
+   color: #1d1d1d;
+}
+.text-bg-primary{
+   background-color: $primary;
+}
+.text-bg-secondary{
+   background-color: $secondary;
+}
+
+a{
+   color: $black;
+   background-color: transparent;
+   text-decoration: none;
+   &:hover{
+      opacity: 70%;
+      color: $secondary;
+   }
+}
+
+.nav-link{
+   color: $primary;
+}
+
